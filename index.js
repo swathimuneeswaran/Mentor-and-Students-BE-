@@ -27,12 +27,12 @@ export const client = await createConnection();
 app.use(express.json())
 app.use(cors())
 
-app.get("/",async(req,res)=>
+app.get("/assign/work",async(req,res)=>
 {
     res.send("<h2>MENTOR AND STUDENTS ASSIGNING☺</h2>")
 })
 
 
-app.use("/student-and-mentor",studentAndMentorRoute)
+app.use("/assign/student-and-mentor",studentAndMentorRoute)
 
 app.listen(PORT,()=>console.log("port is running on",PORT))
